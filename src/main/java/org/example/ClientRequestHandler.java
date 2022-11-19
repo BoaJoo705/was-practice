@@ -28,7 +28,7 @@ public class ClientRequestHandler implements Runnable{
          * 메모리 할당작업이 많이 발생하여 좋지 않다.쓰레드가 많아지게 되면 메모리 사용량이 많아 지게 되고 서버가 다운될 가능성도 있다.
          */
 
-        logger.info("[ClientRequestHandler] new Client {} started.",Thread.currentThread().getName());
+        logger.info("[ClientRequestHandler] new Client {} started.",Thread.currentThread().getName()); //new Client pool-1-thread-1 started.
 
         try(InputStream in = clientSocket.getInputStream(); OutputStream out = clientSocket.getOutputStream()){
             System.out.println("찍히나??");
